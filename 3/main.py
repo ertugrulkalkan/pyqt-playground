@@ -31,6 +31,9 @@ class DialogMain(QDialog):
         self.changeAgeButton.resize(QSize(200, 20))
         self.changeAgeButton.move(QPoint(150, 330))
 
+        self.connect_signals()
+        self.show()
+
     def connect_signals(self):
         self.changeNameButton.clicked.connect(self.eh_changeNameButton_clicked)
         self.changeAgeButton.clicked.connect(self.eh_changeAgeButton_clicked)
@@ -53,8 +56,5 @@ class DialogMain(QDialog):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     dialog = DialogMain()
-
-    dialog.connect_signals()
-    dialog.show()
 
     sys.exit(app.exec())
