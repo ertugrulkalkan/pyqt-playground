@@ -1,6 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox, QPushButton
+
 from PyQt5.QtCore import QPoint, QSize
+from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox, QPushButton
 
 
 class DialogMain(QDialog):

@@ -1,6 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog, QLabel, QPushButton, QFrame
-from PyQt5.QtCore import QPropertyAnimation, QRect, QSize, Qt, QSequentialAnimationGroup, QRect
+
+from PyQt5.QtCore import QPropertyAnimation, QRect, QSequentialAnimationGroup, QSize, Qt
+from PyQt5.QtWidgets import QApplication, QDialog, QFrame, QLabel, QPushButton
 
 
 class DialogMain(QDialog):

@@ -1,6 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog
+
 from PyQt5.QtCore import QSize
+from PyQt5.QtWidgets import QApplication, QDialog
 
 
 class DialogMain(QDialog):
