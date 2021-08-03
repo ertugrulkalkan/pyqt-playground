@@ -1,6 +1,7 @@
 import sys
 
 from PyQt5.QtCore import QPoint, QSize
+from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtWidgets import QApplication, QDialog, QPushButton
 
 
@@ -10,12 +11,15 @@ class DialogMain(QDialog):
         self.setWindowTitle("My Gui")
         self.setFixedSize(QSize(500, 500))
 
+        self.icon = QIcon(QPixmap("./6/logo.png"))
+
         # create buttons dynamically
         self.buttons = []
         for i in range(5):
             button = QPushButton(f"Button{i + 1}", self)
             button.resize(QSize(150, 50))
             button.move(QPoint(175, 25 + (100 * i)))
+            button.setIcon(self.icon)
             self.buttons.append(button)
 
         self.connect_signals()
