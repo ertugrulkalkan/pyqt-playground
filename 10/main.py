@@ -22,6 +22,8 @@ class DialogMain(QDialog):
         self.__textLabelTextColorB = 255
         self.__textLabelFontSize = 40
 
+        # Test Text Label
+
         self.textLabel = QLabel(self)
         self.textLabel.resize(QSize(400, 150))
         self.textLabel.move(QPoint(50, 50))
@@ -30,12 +32,16 @@ class DialogMain(QDialog):
 
         self.applyStyle()
 
+        # Font Size
+
         self.spinBoxFontSize = QSpinBox(self)
         self.spinBoxFontSize.resize(QSize(150, 30))
         self.spinBoxFontSize.move(QPoint(175, 300))
         self.spinBoxFontSize.setRange(20, 100)
         self.spinBoxFontSize.setValue(self.__textLabelFontSize)
         self.spinBoxFontSize.setSuffix(" px")
+
+        # RED
 
         self.doubleSpinBoxR = QDoubleSpinBox(self)
         self.doubleSpinBoxR.resize(QSize(150, 30))
@@ -44,6 +50,9 @@ class DialogMain(QDialog):
         self.doubleSpinBoxR.setValue(100.0)
         self.doubleSpinBoxR.setSingleStep(0.5)
         self.doubleSpinBoxR.setSuffix(" %")
+        self.doubleSpinBoxR.setDecimals(1)
+
+        # GREEN
 
         self.doubleSpinBoxG = QDoubleSpinBox(self)
         self.doubleSpinBoxG.resize(QSize(150, 30))
@@ -52,6 +61,9 @@ class DialogMain(QDialog):
         self.doubleSpinBoxG.setValue(100.0)
         self.doubleSpinBoxG.setSingleStep(0.5)
         self.doubleSpinBoxG.setSuffix(" %")
+        self.doubleSpinBoxG.setDecimals(1)
+
+        # BLUE
 
         self.doubleSpinBoxB = QDoubleSpinBox(self)
         self.doubleSpinBoxB.resize(QSize(150, 30))
@@ -60,6 +72,7 @@ class DialogMain(QDialog):
         self.doubleSpinBoxB.setValue(100.0)
         self.doubleSpinBoxB.setSingleStep(0.5)
         self.doubleSpinBoxB.setSuffix(" %")
+        self.doubleSpinBoxB.setDecimals(1)
 
         self.connect_signals()
         self.show()
